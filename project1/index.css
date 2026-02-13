@@ -1,0 +1,53 @@
+/* 
+Sophia Xuan Thi
+Project 1: Grandma's Lemon Meringue Pie
+CPSC-5200 - Auburn University
+Description: External CSS that goes with the index.html
+*/
+
+
+body {
+    font-family: "Lucida Sans Unicode", Arial, sans-serif;
+    background-color: #fffaf2;
+    color: #333;
+    margin: 2rem auto;
+    max-width: 800px;
+    line-height: 1.6;
+
+    /* adding lemon wallpaper */
+    background-image: url("images/lemon.jpeg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-blend-mode: multiply;
+  }
+   /* added this so it would make the text easier to read */
+   .content-panel {
+    max-width: 800px;
+    margin: 4rem auto;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    padding: 2rem 3rem;
+    backdrop-filter: blur(6px);
+   }
+
+  h1 {
+    color: #5b2c1a;
+    text-align: center;
+  }
+  
+  a {
+    color: #5b2c1a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+  }

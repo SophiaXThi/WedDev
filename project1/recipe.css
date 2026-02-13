@@ -1,0 +1,109 @@
+/* 
+Sophia Xuan Thi
+Project 1: Grandma's Lemon Meringue Pie
+CPSC-5200 - Auburn University
+Description: External CSS that goes with the pie.html
+*/
+
+/* Body text */
+body {
+    background: #FFFFFF url("images/silverware.jpg") repeat center fixed; /* add background image*/
+    color: #404040;
+    font-family: Georgia, Garamond, serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a:link, a:visited, a:hover, a:active {
+    color: #A4A400;
+    text-decoration: underline;   
+  }
+  
+/* add dividers for each section */  
+  hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+ 
+/* Header font stuff */  
+  h1, h2, h3 {
+    color: #A4A400;
+    background: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    letter-spacing: 0.25em;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+  }
+  
+  h2, h3 {
+    text-align: left;
+    font-size: 18pt;
+    font-weight: normal;
+  }
+
+  p {
+    margin: 4px 0 6px 0;
+    line-height: 1.4;
+  }
+
+ /* list stuff */ 
+  ul {
+    list-style-image: url("images/pie_bullet.png");  /* extra feature - pie bullet*/
+    margin-left: 2.5em;
+    padding-left: .5em;
+  }
+
+  ol {
+    list-style-position: outside;
+    margin-left: 1.5em;
+    padding-left: 1em;
+  }
+
+  ol ul {
+    list-style-image: url("images/pie_bullet.png"); /*extra feature - pie bullet*/
+    margin-left: 2.6em;  
+    padding-left: 0.8em;
+  }
+/* added abbreviation stuff*/  
+  abbr[title] {
+    text-decoration: underline;
+    cursor: help;
+  }
+  
+/* additional font stuff */  
+  del { text-decoration: line-through; 
+    }
+
+  .step {
+    font-weight: bold;
+  }  
+/* user comment stuff */    
+  blockquote {
+    background-color: #FFFFA8;
+    font-style: italic;
+    margin: 0.75rem 1.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+/* Preformatted copyright */
+  pre {
+    font-family: monospace;
+    white-space: pre;
+    margin-left: 1em;
+  }
+
+/* padding the entire page so it is easier to read */
+  .page{
+    padding-left: 2em;
+    padding-right: 2em;
+    box-sizing: border-box;
+  }
