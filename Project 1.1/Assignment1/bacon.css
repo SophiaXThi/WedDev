@@ -1,0 +1,194 @@
+/* ###### Page background ########### */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #dad9d4;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #222;
+}
+
+/* ##### Frame + centering ############## */
+#frame {
+  background-color: #dad9d4;
+}
+
+/* center banner + main content */
+#banner,
+#main {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ########## Banner ################### */
+#banner {
+  background: url("images/banner-background.png") repeat;
+  padding: 10px 14px;
+  color: #fff;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+/* MyMDb logo */
+#banner img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* banner text */
+#banner .site-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ############# Main content ############## */
+#main {
+  background: #fff;
+  padding: 26px 18px 34px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* main page heading */
+#main h1 {
+  margin: 12px 0 18px;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* ######## Actor image ########## */
+#main .hero-img {
+  display: block;
+  margin: 18px auto;
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* ###### Fieldsets (search forms) ################ */
+fieldset {
+  width: 360px;
+  max-width: 92%;
+  margin: 18px auto 10px;
+  padding: 16px 10px 12px;
+  border: 1px solid #777;
+  position: relative;
+  text-align: center;
+}
+
+/* fieldset title */
+fieldset legend {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 6px;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* keep form inputs inline */
+fieldset form {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ############ Inputs / buttons ###################### */
+input[type="text"] {
+  width: 90px;
+  padding: 3px 4px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #bbb;
+}
+
+button,
+input[type="submit"] {
+  padding: 3px 10px;
+  font-size: 12px;
+  border: 1px solid #777;
+  background: #d9d4c8;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #cfc8ba;
+}
+
+/* #### Results table ################ */
+/* So much time was spent on THIS ONE PART OF THE HOMEWORK. 
+I think I ate an entire box of donuts out of stress */
+#main table {
+  width: 70%;
+  margin: 10px auto 25px;
+  border-collapse: collapse;
+  border: 1px solid #ddd;   /* OUTER BORDER ONLY */
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+/* table caption */
+#main caption {
+  caption-side: top;
+  text-align: center;
+  font-weight: normal;      /* All Films NOT bold */
+  padding: 6px 0 8px;
+  margin: 0 auto;
+}
+
+/* header row */
+#main th {
+  padding: 4px 8px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd; 
+}
+
+/* table cells */
+#main td {
+  padding: 3px 8px;
+  border: none;            
+}
+
+/* zebra striping */
+#main tbody tr:nth-child(even) {
+  background: #d7d5cf;
+}
+
+/* column alignment */
+#main th:nth-child(1),
+#main td:nth-child(1) {
+  width: 40px;
+  text-align: left;
+}
+
+#main th:nth-child(2),
+#main td:nth-child(2) {
+  text-align: center;
+}
+
+#main th:nth-child(3),
+#main td:nth-child(3) {
+  width: 70px;
+  text-align: right;
+}
+
+/* ###### Messages ######## */
+.msg {
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.msg.error {
+  color: rgba(153, 0, 0, 0.605);
+}
+
