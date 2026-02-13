@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversions>
+    <conversion id="hex">
+        <label>Hexadecimal (Text → Hex)</label>
+        <description>Encode the text as hexadecimal bytes (UTF-8).</description>
+        <details> This is an encoding method that consist of numbers 0-9 and 
+        letters A-F for representing numerical values using base 16 
+        which is like base 10 except that you have 16 fingers. 
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/Hexadecimal"> 
+            Hexadecimal - Wikipedia
+        </reference>
+        <reference href = "https://www.geeksforgeeks.org/maths/hexadecimal-number-system/">
+            Hexadecimal - Geeks For Geeks
+        </reference>
+    </conversion>
+
+    <conversion id="binary">
+        <label>Binary (Text → Binary)</label>
+        <description>Represent each byte of the text as 8-bit binary.</description>
+        <details> This is an encoding method that consists of 1s and 0s to represent 
+        base 2 which is like base 16 if you lost 8 fingers.
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/Binary_number">
+            Binary - Wikipedia
+        </reference>
+        <reference href = "https://www.geeksforgeeks.org/maths/binary-number-system/">
+            Binary - Geeks For Geeks
+        </reference>
+    </conversion>
+
+    <conversion id="base64">
+        <label>Base64 Encoding</label>
+        <description>Encode the text using Base64.</description>
+        <details>An encoding method that consists of 64 safe, printable ASCII characters:
+         (A-Z, a-z, 0-9, +, /, and = for padding) for representing binary data using base 64.
+        This is a way to translate computer data into text you can safely copy and paste 
+        anywhere on the internet without corruption.
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/Base64">
+            Base64 - Wikipedia
+        </reference>
+    </conversion>
+
+    <conversion id="urlencode">
+        <label>URL Encoding</label>
+        <description>AKA Percent-encoding. Encode characters so the string can be safely used in a URL.</description>
+        <details> This is an encoding method that consists of a restricted set of safe ASCII 
+        characters for representing data within a Uniform Resource Identifier (URI) using 
+        base 256 (basically all possible bytes) while translating unsafe characters into a 
+        percent-sign followed by their two-digit hexadecimal.
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/Percent-encoding">
+            Percent Encoding/URL encoding
+        </reference>
+        <reference href = "https://www.geeksforgeeks.org/html/explain-the-concept-of-url-encoding-describe-the-need-for-encoding-in-html/">
+            URL Encoding - Geeks For Geeks
+        </reference>
+    </conversion>
+
+    <conversion id="md5">
+        <label>Hashing (MD5)</label>
+        <description>Compute the MD5 hash of the text.</description>
+        <details> A Hashing method that takes an input of any size and uses a complex mathematical 
+        algorithm to generate a unique, fixed-length "digital fingerprint." The output will always 
+        be a 32-char hexadecimal string. 
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/MD5">
+            MD5 Hashing - Wikipedia
+        </reference>
+        <reference href = "https://www.geeksforgeeks.org/computer-networks/what-is-the-md5-algorithm/">
+            MD5 - Geeks For Geeks
+        </reference>
+    </conversion>
+
+    <conversion id="sha1">
+        <label>Hashing (SHA-1)</label>
+        <description>Compute the SHA-1 hash of the text.</description>
+        <details> A Hashing method that is similar to MD5 but always produces a 40-char hexadecimal
+        string that is a bit longer and lsightly more complex than the 32-char MD5 hash. Because it
+        is longer, it is less more collision-resistant (ie two unrelated files should not have the same
+        SHA-1 hash)
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/SHA-1">
+            SHA-1 - Wikipedia
+        </reference>
+        <reference href = "https://www.geeksforgeeks.org/java/sha-1-hash-in-java/">
+            SHA - 1 Geeks for Geeks
+        </reference>
+    </conversion>
+
+    <conversion id="sha256">
+        <label>Hashing (SHA-256)</label>
+        <description>Compute the SHA-256 hash of the text.</description>
+        <details> Another Hashing method that is similar to MD5 and belongs to the SHA-2 family 
+        of algorithms. The output for this is a 64-char hexadecimal string. Widely used and trusted 
+        in various fields such as security systems to crytpocurrency networks for its high resistance
+         to collision attacks. 
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/SHA-2">
+            SHA-2 - Wikipedia
+        </reference>
+        <reference href = "https://www.geeksforgeeks.org/computer-networks/difference-between-sha1-and-sha256/">
+            SHA-256 - Geeks For Geeks
+        </reference>
+    </conversion>
+
+    <conversion id="octet">
+        <label>Octet (Text → Decimal Bytes)</label>
+        <description>Show each byte of the text as a decimal number (0–255).</description>
+        <details>A unit of digital information that is precisely and exactly eight bits or exactly two nybbles.  
+        </details>
+        <reference href = "https://en.wikipedia.org/wiki/Octet_(computing)">
+            Octet - Wikipedia
+        </reference>
+    </conversion>
+</conversions>

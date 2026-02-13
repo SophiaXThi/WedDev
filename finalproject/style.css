@@ -1,0 +1,428 @@
+/* Start with a clean state so the browser doesn't do weird stuff */
+* { box-sizing: border-box; margin:0; padding:0; }
+
+/* Found some nifty font on 1001fonts.com - 
+https://www.w3schools.com/css/css3_fonts.asp - Source on how to use my own font */
+@font-face {
+    font-family: remington1938;
+    src: url(font/zai_RemingtonDeluxeTypewriter1938.ttf);
+}
+
+body {
+    font-family: remington1938, serif;
+    margin: 0;
+    color: #1e1a14;
+    background-color: #e9e5db; /* In case the background doesn't work */
+
+}
+/* images found on pixabay.com */
+body.main-page {
+    background-image: url("images/vintage-brown-faux-leather.avif");
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #111;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 24px auto 40px;
+    background: rgba(240, 232, 214, 0.732); /* slightly see-through */
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25); /* “sits” on the wood */
+}
+
+.page {
+    background: rgba(248, 244, 233, 0.732);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Navigation Bar with all of the links */
+.top-nav {
+    background-image: url("images/dark_wood.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-tab {
+    padding: 8px 22px;
+    border: 1px solid #d1d5db;
+    background: #ffffff8a;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-tab:hover {
+    background: #ffffff8a;
+}
+
+.nav-tab.active {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+    font-weight: bold;
+}
+
+/* Page Shell---------------------------------------- */
+.page-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.06);
+}
+
+/* Header */
+.page-header { text-align:center; margin-bottom:8px; }
+.page-header h1 { font-size:1.6rem; margin-bottom:6px; }
+.page-header p { font-size:0.9rem; color:#444; }
+
+.main-divider {
+    border:none;
+    border-top:1px solid #ddd;
+    margin:12px 0 20px;
+}
+
+/* Grid layout stuff */
+.main-grid {
+    display:grid;
+    grid-template-columns: 1.1fr 1.5fr 1.4fr;
+    gap:16px;
+}
+
+/* Panel */
+.panel {
+    border:1px solid #d1d5db;
+    border-radius:6px;
+    background:#f7edded5;
+    padding:10px 12px;
+}
+
+.panel h2 {
+    font-size:0.95rem;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+/* Left panel: Transformation modes */
+.mode-list {
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.mode-item {
+    background:#ffffff;
+    border:1px solid #cbd5e1;
+    border-radius:4px;
+    padding:6px 8px;
+    font-size:0.88rem;
+    cursor:grab;
+}
+.mode-item:active { cursor:grabbing; }
+
+/* Center area: Pipeline area doodads */
+.pipeline-drop-zone {
+    border:1px solid #cbd5e1;
+    border-radius:4px;
+    background:#ffffff;
+    padding:8px;
+    min-height:180px;
+}
+
+.pipeline-placeholder-text {
+    display:block;
+    text-align:center;
+    color:#6b7280;
+    margin-top:40px;
+    font-size:0.83rem;
+}
+
+.pipeline-step {
+    background:#cddbb6;
+    border:1px solid #6b7f43;
+    border-radius:3px;
+    padding:4px 8px;
+    margin-bottom:4px;
+    font-size:0.86rem;
+    color:#1e1a14;
+}
+
+/* Right Column */
+.right-column {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* Input panel */
+.input-panel textarea {
+    width:100%;
+    min-height:90px;
+    font-family:inherit;
+    padding:6px;
+    border:1px solid #cbd5e1;
+    border-radius:4px;
+    resize:vertical;
+}
+
+/* Control panel with the buttonssss all of the buttons */
+.controls-buttons {
+    display:flex;
+    gap:8px;
+    margin-bottom:8px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding:6px 10px;
+    font-size:0.85rem;
+    border-radius:4px;
+    cursor:pointer;
+    border:1px solid transparent;
+}
+
+.btn-primary {
+    background:#291200;
+    border-color:#291200;
+    color:white;
+}
+.btn-primary:hover { background:#291200; }
+
+.btn-secondary {
+    background:white;
+    border-color:#cbd5e1;
+    color:#111829;
+}
+.btn-secondary:hover { background:#f3f4f6; }
+
+.controls-steps {
+    font-size:0.8rem;
+    color:#374151;
+}
+
+/* Output window */
+.output-window {
+    min-height:100px;
+    background:white;
+    border:1px solid #cbd5e1;
+    border-radius:4px;
+    padding:6px;
+    font-family:"Courier New", monospace;
+    font-size:0.85rem;
+    white-space:pre-wrap;
+    word-break:break-all;
+}
+
+
+/* Added this when looking at my project on my laptop vs my desktop. It looked very different */
+@media(max-width:900px){
+    .main-grid { grid-template-columns:1fr; }
+    .right-column { flex-direction:column; }
+}
+
+
+
+/* logs page stuff ################<('.')^################# */
+/* Only affect the logs page */
+.logs-page {
+    background-color: #e5e1d4;  /* fallback if image fails */
+}
+
+/* Big soft background behind the paper sheet so it looks vintage and old timey*/
+.vintage-background {
+    background-image: url("images/vintage-paper.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    min-height: 100vh;
+    padding: 24px 0;
+}
+
+/* On logs page, make the shell transparent so the paper shows otherwise it's really ugly*/
+.logs-shell {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* The actual "sheet of paper" with the logs on it */
+.paper-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 40px;
+    background: rgba(255, 255, 255, 0.9); /* light overlay so text is clear */
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Title + text inside the sheet */
+.paper-title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.paper-intro {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+/* Lines for each log entry */
+.paper-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.paper-line {
+    border-bottom: 1px solid rgba(60, 60, 60, 0.35);
+    padding-bottom: 4px;
+    min-height: 20px;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+}
+
+/* ----- Logs page layout inside the paper box ----- */
+
+.log-entry {
+    border-top: 1px solid rgba(0,0,0,0.15);
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+}
+
+.log-time {
+    font-weight: 600;
+}
+
+.log-pipeline {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.log-section {
+    margin-bottom: 6px;
+}
+
+.log-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* boxed text with wrapping so it doesn't run off the page otherwise it looks HORRIBLE!*/
+.log-text {
+    font-family: "remington1938", "Courier New", monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    background: rgba(0,0,0,0.03);
+    padding: 4px 6px;
+    border-radius: 3px;
+    white-space: pre-wrap;   /* keep line breaks */
+    word-break: break-all;   /* wrap very long hex/binary strings */
+}
+
+/* make long outputs scrollable instead of 1000px tall */
+.log-output {
+    max-height: 5.5em;       /* tweak to taste */
+    overflow: auto;
+}
+
+.download-container-bottom {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.download-btn {
+    background-color: brown;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+    background-color: brown;
+}
+
+/* Transformation guide page stuff ################<('.')^################# */
+/* ----- Transformation guide styling ----- */
+.guide-page {
+    background-color: #e5e1d4;  /* fallback if image fails */
+}
+
+.guide-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.guide-entry {
+    border-top: 1px solid rgba(0,0,0,0.15);
+    padding-top: 10px;
+}
+
+.guide-label {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.guide-id {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-left: 6px;
+}
+
+.guide-description {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #374151;
+}
+
+.guide-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.guide-links {
+    margin-top: 4px;
+}
+
+.guide-back-link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #291200;
+}
+
+.guide-back-link:hover {
+    text-decoration: underline;
+}
